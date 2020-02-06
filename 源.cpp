@@ -1,6 +1,18 @@
 #include<iostream>
 using namespace std;
+union  Packed {
+	char i;
+	short j;
+	int k;
+	long l;
+	double d;
+};
 int main()
 {
-	cout << "hello world" << endl;
+	cout << "sizeof(Packed) = " <<sizeof(Packed)<< endl;
+	Packed x;
+	x.i = 'c';
+	cout << x.i << endl;
+	x.d = 3.14;
+	cout << x.d << endl;
 }
